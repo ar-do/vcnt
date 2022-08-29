@@ -6,6 +6,10 @@
 
 Die Fachabteilungen legen mit grossen Batchjobs jeweils die ganze Informatik lahm. Diese Batchjobs sollen unterteilt und so strukturiert werden, dass sie jederzeit im Hintergrund durchgeführt werden können.
 
+### Umsetzung
+
+In dieser Aufgabe erstellen wir einen Job, der on Demand ausgeführt wird, und einen CronJob, der regelmässig automatisch ausgeführt wird. Es handelt sich um Pseude Jobs, die eine Funktionalität simulieren, jedoch nicht wirklich etwas machen.
+
 #### Job erstellen
 
 Als erstes erstellen deklarieren wir den Job in einem Yaml File:
@@ -39,7 +43,24 @@ Als nächstes muss auf dem Cluster der Job gestartet werden:
 kubectl apply -f https://raw.githubusercontent.com/ar-do/vcnt/main/jobs/1_backup_job.yaml
 ```
 
+#### CronJob erstellen
 
+#### CronJob starten
 
+#### Pods verwalten
 
+## Auftrag 2: Health Probe Pattern
 
+### Aufgabenstellung
+
+Die von der Entwicklung angelieferten Microservices blockieren oder reagieren nicht mehr auf Kundenanfragen. Mittels den "Health Probe Pattern" soll die Ausfallsicherheit der Microservices verbessert werden.
+
+### Umsetzung
+
+## Auftrag 3: Init Container
+
+### Aufgabenstellung
+
+Die angelieferten Container Images weissenerhebliche Sicherheitsmängel auf. Und/oder beinhalten Abhandlungen, z.B. Erstellen von Datenbanktabellen, die nicht in die Container Images gehören. Mittels separaten InitContainer sollen die Sicherheitsmängel verkleinert werden. Nicht zu Microservices gehörende Abhandlungen, z.B. Erstellen von Datenbanktabellen, soll in separate InitContainer ausgelagert werden.
+
+### Umsetzung
