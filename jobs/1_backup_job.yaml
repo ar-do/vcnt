@@ -8,7 +8,5 @@ spec:
       containers:
       - name: backup
         image: busybox:1.28
-        command: 
-        - echo hello 
+        command: ["echo", "Starting Backup..."]
       restartPolicy: Never
-  backoffLimit: 4
