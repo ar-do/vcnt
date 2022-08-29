@@ -7,6 +7,6 @@ spec:
     spec:
       containers:
       - name: backup
-        image: busybox:1.28
+        image: alpine
         command: ["echo", "Starting Backup..."]
       restartPolicy: Never
