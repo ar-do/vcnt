@@ -7,10 +7,8 @@ spec:
     spec:
       containers:
       - name: backup
-        image: bash:4.4
+        image: busybox:1.28
         command: 
-        - Starting backup...
-        - cp /home/ubuntu/cnt/vcnt_demo/backupfile.txt /home/ubuntu/cnt/vcnt_demo/fileserver_demo/backupfile.txt
-        - echo Backup done
+        - echo hello 
       restartPolicy: Never
   backoffLimit: 4
