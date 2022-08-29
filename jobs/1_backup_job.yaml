@@ -8,5 +8,5 @@ spec:
       containers:
       - name: backup
         image: alpine
-        command: ["echo", "Starting Backup..."]
+        command: echo Starting Backup...
       restartPolicy: Never
