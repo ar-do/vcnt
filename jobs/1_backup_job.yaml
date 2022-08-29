@@ -17,7 +17,8 @@ spec:
         - git clone https://github.com/ar-do/vcnt_demo.git backup_dest
         - cp backup_file.txt backup_dest
         - cd backup_dest
-        - git commit -a -m "upload backup"
+        - git add .
+        - git commit -m "upload backup"
         - git remote add origin https://github.com/ar-do/vcnt_demo.git
         - git branch -M main  
         - git push -u origin main
