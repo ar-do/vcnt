@@ -7,10 +7,12 @@ spec:
     spec:
       containers:
       - name: backup
-        image: alpine
+        image: ubuntu:latest
         imagePullPolicy: IfNotPresent
         command: 
         - echo Starting Backup...
+        - apt-get -y update
+        - apt-get -y install wget
         - wget https://raw.githubusercontent.com/ar-do/vcnt/main/jobs/backup_source/backup_file.txt
         - sleep 5
         - echo Backup done!
