@@ -12,6 +12,9 @@ spec:
         - echo Installing git...
         - apt-get -y update
         - apt-get -y install git
+        - Initalising git...
+        - git config --global user.email "test@test.com"
+        - git config --global user.name "kubernetes_job"
         - echo Starting Backup...
         - wget https://raw.githubusercontent.com/ar-do/vcnt/main/jobs/backup_source/backup_file.txt
         - git clone https://github.com/ar-do/vcnt_demo.git backup_dest
