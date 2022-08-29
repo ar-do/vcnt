@@ -7,7 +7,7 @@ spec:
     spec:
       containers:
       - name: backup
-        image: ubuntu:latest
+        image: alpine
         command: 
         - echo Installing git...
         - apt-get -y update
