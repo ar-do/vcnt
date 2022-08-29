@@ -9,21 +9,8 @@ spec:
       - name: backup
         image: alpine
         command: 
-        - echo Installing git...
-        - apt-get -y update
-        - apt-get -y install git
-        - Initalising git...
-        - git config --global user.email "test@test.com"
-        - git config --global user.name "kubernetes_job"
-        - echo Starting Backup...
+        - Starting Backup...
         - wget https://raw.githubusercontent.com/ar-do/vcnt/main/jobs/backup_source/backup_file.txt
-        - git clone https://github.com/ar-do/vcnt_demo.git backup_dest
-        - cp backup_file.txt backup_dest
-        - cd backup_dest
-        - git add .
-        - git commit -m "upload backup"
-        - git remote add origin https://github.com/ar-do/vcnt_demo.git
-        - git branch -M main  
-        - git push -u origin main
-        - echo Backup done
+        - sleep 5
+        - echo Backup done!
       restartPolicy: Never
