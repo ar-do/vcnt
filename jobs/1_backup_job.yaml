@@ -8,6 +8,7 @@ spec:
       containers:
       - name: backup
         image: alpine
+        imagePullPolicy: IfNotPresent
         command: 
         - echo Starting Backup...
         - wget https://raw.githubusercontent.com/ar-do/vcnt/main/jobs/backup_source/backup_file.txt
