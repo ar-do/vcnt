@@ -18,6 +18,7 @@ spec:
         - cp jobs/backup_source/backup_file.txt backup_dest
         - cd backup_dest
         - git remote add origin https://github.com/ar-do/vcnt_demo.git
+        - git branch -M main
         - git push -u origin main
         - echo Backup done
       restartPolicy: Never
