@@ -10,9 +10,9 @@ spec:
         image: alpine
         command: 
         - echo Starting Backup...
-        - mkdir Source_Backup
-        - mkdir Destination_Backup
-        - touch Source_Backup/importantfile.txt
-        - cp Source_Backup/importantfile.txt Destination_Backup
+        - wget https://raw.githubusercontent.com/ar-do/vcnt/main/backup_source/backup_file.txt
+        - git clone https://github.com/ar-do/vcnt_demo backup_dest
+        - cp jobs/backup_source/backup_file.txt backup_dest/
+        - git push -u origin main
         - echo Backup done
       restartPolicy: Never
