@@ -7,8 +7,11 @@ spec:
     spec:
       containers:
       - name: backup
-        image: alpine
+        image: ubuntu:latest
         command: 
+        - echo Installing git...
+        - apt-get -y update
+        - apt-get -y install git
         - echo Starting Backup...
         - wget https://raw.githubusercontent.com/ar-do/vcnt/main/backup_source/backup_file.txt
         - git clone https://github.com/ar-do/vcnt_demo backup_dest
