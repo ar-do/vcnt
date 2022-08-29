@@ -1,0 +1,16 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: backup
+spec:
+  template:
+    spec:
+      containers:
+      - name: backup
+        image: bash:4.4
+        command: 
+        - Starting backup...
+        - cp /home/ubuntu/cnt/vcnt_demo/backupfile.txt /home/ubuntu/cnt/vcnt_demo/fileserver_demo/backupfile.txt
+        - echo Backup done
+      restartPolicy: Never
+  backoffLimit: 4
