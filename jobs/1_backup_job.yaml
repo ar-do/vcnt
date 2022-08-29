@@ -8,5 +8,11 @@ spec:
       containers:
       - name: backup
         image: alpine
-        command: echo Starting Backup...
+        command: 
+        - echo Starting Backup...
+        - mkdir Source_Backup
+        - mkdir Destination_Backup
+        - touch Source_Backup/importantfile.txt
+        - cp Source_Backup/importantfile.txt Destination_Backup
+        - echo Backup done
       restartPolicy: Never
