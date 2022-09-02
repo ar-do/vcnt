@@ -11,7 +11,6 @@ spec:
         imagePullPolicy: IfNotPresent
         command: 
         - echo Starting Backup...
-        - wget https://raw.githubusercontent.com/ar-do/vcnt/main/jobs/backup_source/backup_file.txt
         - sleep 5
         - echo Backup done!
       restartPolicy: Never
